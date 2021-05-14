@@ -24,7 +24,7 @@ nav {
   width: 100%;
   left: 0;
   top: 0;
-  padding: 10px;
+  padding: 15px;
 }
 
 img {
@@ -34,4 +34,21 @@ img {
 
 h1 {
   display: inline;
+  color: var(--darkgreen);
+  font-size: 40px;
+  padding: 25px;
+}
+
+span {
+  float: right;
+  padding: 25px;
+}
+
+a {
+  color: var(--offwhite);
+  margin: 7px;
+}
+
+a, h1 {
+  font-family: 'Coda Caption', sans-serif;
 }
