@@ -14,17 +14,19 @@
 body {
   height: 100vh;
   background-color: var(--offwhite);
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 nav {
-  position: absolute;
   background-color: var(--darkblue);
-  height: 10%;
+  height: 75px;
   width: 100%;
   left: 0;
   top: 0;
-  padding: 15px;
+  display: flex;
+  flex-grow: 3;
+  justify-content: center;
 }
 
 img {
@@ -33,20 +35,16 @@ img {
 }
 
 h1 {
+  flex-grow: 10;
   display: inline;
   color: var(--darkgreen);
   font-size: 40px;
-  padding: 25px;
-}
-
-span {
-  float: right;
-  padding: 25px;
 }
 
 a {
+  margin: 20px 8px;
   color: var(--offwhite);
-  margin: 7px;
+  
 }
 
 a, h1 {
