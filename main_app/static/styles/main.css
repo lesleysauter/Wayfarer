@@ -1,35 +1,52 @@
+:root{
+  --offwhite: #f4f7ed;
+  --brightgreen: #86ee60;
+  --darkgreen: #2e6e65;
+  --darkblue: #2b3752;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background-color: #121212;
-    color: #ffffff;
-    min-height: 100vh;
-  }
+  height: 100vh;
+  background-color: var(--offwhite);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  background-color: var(--darkblue);
+  height: 75px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-grow: 3;
+  justify-content: center;
+}
+
+img {
+  height: 100%;
+  display: inline;
+}
+
+h1 {
+  flex-grow: 10;
+  display: inline;
+  color: var(--darkgreen);
+  font-size: 40px;
+}
+
+a {
+  margin: 20px 8px;
+  color: var(--offwhite);
   
-  h1,
-  h2,
-  h3 {
-    color: #ffffff;
-  }
-  
-  .title {
-    color: #ffffff;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .gallery .card {
-    min-width: 280px;
-    max-width: 30%;
-    transition: 0.1s linear;
-  }
-  
-  .gallery .card:hover {
-    transform: scale(1.3);
-  }
-  
-  p {
-    font-size: 12px;
-  }
+}
+
+a, h1 {
+  font-family: 'Coda Caption', sans-serif;
+}
