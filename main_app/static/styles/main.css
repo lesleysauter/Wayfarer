@@ -5,12 +5,33 @@
   --darkblue: #2b3752;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
   background-color: var(--offwhite);
+  position: relative;
 }
 
 nav {
   position: absolute;
-  height: 15%;
+  background-color: var(--darkblue);
+  height: 10%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 10px;
+}
+
+img {
+  height: 100%;
+  display: inline;
+}
+
+h1 {
+  display: inline;
 }
