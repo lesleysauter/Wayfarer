@@ -41,6 +41,7 @@ h1 {
   display: inline;
   color: var(--darkgreen);
   font-size: 38px;
+  margin: 12px;
 }
 
 a {
@@ -51,5 +52,5 @@ a {
 }
 
 a, h1 {
-  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
 }
