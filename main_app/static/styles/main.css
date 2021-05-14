@@ -1,35 +1,16 @@
+:root{
+  --offwhite: #f4f7ed;
+  --brightgreen: #86ee60;
+  --darkgreen: #2e6e65;
+  --darkblue: #2b3752;
+}
+
 body {
-    background-color: #121212;
-    color: #ffffff;
-    min-height: 100vh;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    color: #ffffff;
-  }
-  
-  .title {
-    color: #ffffff;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .gallery .card {
-    min-width: 280px;
-    max-width: 30%;
-    transition: 0.1s linear;
-  }
-  
-  .gallery .card:hover {
-    transform: scale(1.3);
-  }
-  
-  p {
-    font-size: 12px;
-  }
+  height: 100vh;
+  background-color: var(--offwhite);
+}
+
+nav {
+  position: absolute;
+  height: 15%;
+}
