@@ -35,7 +35,7 @@ class Login(View):
 
 
 class Signup(View):
-    def post(request):
+    def post(self, request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
