@@ -32,21 +32,25 @@ nav {
 img {
   height: 100%;
   display: inline;
+  height: 75%;
+  margin: 10px;
 }
 
 h1 {
   flex-grow: 10;
   display: inline;
   color: var(--darkgreen);
-  font-size: 40px;
+  font-size: 38px;
+  margin: 12px;
 }
 
 a {
   margin: 20px 8px;
   color: var(--offwhite);
+  text-decoration: none;
   
 }
 
 a, h1 {
-  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
 }
