@@ -4,7 +4,7 @@ from django.db.models import Model
 
 # Create your models here.
 
-class User(Model):
+class Profile(Model):
 
     username = models.CharField(max_length=25)
     name = models.CharField(max_length=100)

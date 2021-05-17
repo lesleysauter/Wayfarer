@@ -10,6 +10,7 @@ from django.db import models
 #import Models
 
 from .models import User
+from .models import Profile
 
 # Create your views here.
 
@@ -26,9 +27,9 @@ class Home(TemplateView):
 class Profile(TemplateView):
     template_name = "profile.html"
 
-    # def form_valid(self, form):
-    #     form.instance.user = self.request.user
-    #     return 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(Profile, self).for_valid(form)
     
 
 class Login(View):
@@ -49,8 +50,7 @@ class Signup(View):
     def post(self, request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            # add user to main_app_user table in db
-            user = models.ForeignKey(User, form.save())
+            user = form.save()
             login(request, user)
             return redirect("profile")
         else:
