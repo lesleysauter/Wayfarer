@@ -33,7 +33,7 @@ class Login(View):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("profile")
+            return redirect(f"/profile/{user.pk}")
         
         else:
             return HttpResponse("Unable to login!", content_type="text/plain")
