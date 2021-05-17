@@ -5,6 +5,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from .models import Post, Profile
 
 # Create your views here.
@@ -18,8 +19,11 @@ class Home(TemplateView):
         return context
 
 
-class ShowProfile(TemplateView):
-    template_name = "profile.html"
+class ShowProfile(View):
+    def get(self, request, pk):
+        user = User.objects.get(pk=pk)
+        context = {"user": user}
+        return render(request, "profile.html", context)
 
 
 class Login(View):

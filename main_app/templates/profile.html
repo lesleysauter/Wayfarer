@@ -2,6 +2,12 @@
 
 {% block content %}
 
-<h2> Profile Page </h2>
+<section class="left-panel">
+    <h2>{{ user.username }}</h2>
+</section>
+
+<section class="right-panel">
+    {{ user.profile.name }}
+</section>
 
 {% endblock %}
