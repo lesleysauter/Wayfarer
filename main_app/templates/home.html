@@ -2,26 +2,27 @@
 {% block content %}
  <h1>Wayfarer is...</h1>
 
-<form action="">
+<form method="post" action="{% url 'customlogin' %}">
+{% csrf_token %}
 <h2>Log in</h2>
 
 <p> username
 <input type="text" name="username" placeholder="username">
 </p>
 <p> password
-<input type="text" name="password" placeholder="password">
+<input type="password" name="password" placeholder="password">
 </p>
 
+<input type="submit" value="log in" />
+</form>
+
+
+<form method="post" action="{% url 'signup' %}">
+{% csrf_token %} 
 <h3>Sign up</h3>
-<p> username
-<input type="text" name="username" placeholder="username">
-</p>
-<p> password
-<input type="text" name="username" placeholder="password">
-</p>
-<p> confirm password
-<input type="text" name="confirm password" placeholder="confirm password">
-</p>
+{{ form.as_p }}
+
+<input type="submit" value="sign up" />
 
 </form>
 
