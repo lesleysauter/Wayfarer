@@ -15,30 +15,39 @@ class Home(TemplateView):
         return context
         
 
-def post(request):
-    form = UserCreationForm(request.POST)
-    if form.is_valid():
-        user = form.save()
-        login(request, user)
-        return redirect("profile")
-    else:
-        return HttpResponse("Unable to create profile!", content_type="text/plain")
-    
-
 
 class Profile(TemplateView):
     template_name = "profile.html"
 
 
-def login(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        return redirect('profile')
-    else:
-        return HttpResponse("Unable to log in!", content_type="text/plain")
+class Login(View):
+    def post(self, request):
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("profile")
+        
+        else:
+            return HttpResponse("Unable to login!", content_type="text/plain")
+            
+
+
+class Signup(View):
+    def post(request):
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("profile")
+        else:
+            return HttpResponse("Unable to create profile!", content_type="text/plain")
+
+
+
+
+
 
 
 

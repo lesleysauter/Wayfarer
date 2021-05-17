@@ -2,7 +2,8 @@
 {% block content %}
  <h1>Wayfarer is...</h1>
 
-<form action="">
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
 <h2>Log in</h2>
 
 <p> username
@@ -11,7 +12,10 @@
 <p> password
 <input type="text" name="password" placeholder="password">
 </p>
+</form>
 
+<form method="post" action="{% url 'signup' %}">
+{% csrf_token %} {{ form.as_p }}
 <h3>Sign up</h3>
 <p> username
 <input type="text" name="username" placeholder="username">
