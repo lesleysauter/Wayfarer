@@ -25,6 +25,10 @@ class ShowProfile(View):
         context = {"user": user}
         return render(request, "profile.html", context)
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(Profile, self).for_valid(form)
+    
 
 class Login(View):
     def post(self, request):
