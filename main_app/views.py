@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse, response
 from django.views.generic.base import TemplateView
+from django.views.generic import DetailView
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
+from .models import Post, Profile
+
 # Create your views here.
 
 class Home(TemplateView):
@@ -13,10 +16,9 @@ class Home(TemplateView):
         context = super().get_context_data(**kwargs)
         context["form"] = UserCreationForm()
         return context
-        
 
 
-class Profile(TemplateView):
+class ShowProfile(TemplateView):
     template_name = "profile.html"
 
 
@@ -31,7 +33,6 @@ class Login(View):
         
         else:
             return HttpResponse("Unable to login!", content_type="text/plain")
-            
 
 
 class Signup(View):
@@ -45,11 +46,8 @@ class Signup(View):
             return HttpResponse("Unable to create profile!", content_type="text/plain")
 
 
-
-
-
-
-
-
-
-        
+class ShowPost(View):
+    def get(self, request, pk):
+        post = Post.objects.get(pk=pk)
+        context = {"post": post}
+        return render(request, "show-post.html", context)
