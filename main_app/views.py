@@ -44,12 +44,5 @@ class Signup(View):
         else:
             return HttpResponse("Unable to create profile!", content_type="text/plain")
 
-
-
-
-
-
-
-
-
-        
+class Post(TemplateView):
+    template_name = "show-post.html"

@@ -16,6 +16,7 @@ body {
   background-color: var(--offwhite);
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
 }
 
 nav {
@@ -48,9 +49,20 @@ a {
   margin: 20px 8px;
   color: var(--offwhite);
   text-decoration: none;
-  
 }
 
 a, h1 {
   font-family: 'Coda', cursive;
+}
+
+.left-panel {
+  height: 100%;
+  width: 40%;
+  background-color: var(--darkblue);
+}
+
+.right-panel {
+  height: 100%;
+  width: 60%;
+  box-shadow: 10px 10px 10px grey;
 }
