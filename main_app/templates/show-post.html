@@ -2,11 +2,15 @@
 {% block content %}
 
 <section class="left-panel">
-    Hello
+    <h2>{{ post.title }}</h2>
+    <span>
+        <h3>in {{ post.location }}</h3>
+        <h3>by {{ post.profile_id.name }}</h3>
+    </span>
 </section>
 
 <section class="right-panel">
-    Also Hi
+    {{ post.content }}
 </section>
 
 {% endblock %}
