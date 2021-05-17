@@ -16,10 +16,12 @@ body {
   background-color: var(--offwhite);
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
 }
 
 nav {
   background-color: var(--darkblue);
+  box-shadow: 5px 5px 10px grey;
   height: 75px;
   width: 100%;
   left: 0;
@@ -48,9 +50,32 @@ a {
   margin: 20px 8px;
   color: var(--offwhite);
   text-decoration: none;
-  
 }
 
 a, h1 {
   font-family: 'Coda', cursive;
+}
+
+span {
+  float: right;
+}
+
+.left-panel {
+  height: calc(100% - 85px);
+  flex-grow: 2;
+  background-color: var(--darkblue);
+  box-shadow: 5px 5px 10px grey;
+  margin-top: 10px;
+  color: var(--offwhite);
+  padding: 40px;
+  font-size: 40px;
+}
+
+.right-panel {
+  height: calc(100% - 85px);
+  flex-grow: 8;
+  box-shadow: 5px 5px 10px grey;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 40px 15%;
 }
