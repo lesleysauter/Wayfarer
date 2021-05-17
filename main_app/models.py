@@ -12,6 +12,8 @@ class User(Model):
     current_city = models.CharField(max_length=250)
     join_date = models.DateTimeField(auto_now_add=True)
 
+    
+
 
 class Post(Model):
 
