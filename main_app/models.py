@@ -6,9 +6,8 @@ from django.db.models import Model
 
 class Profile(Model):
 
-    username = models.CharField(max_length=25)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="profiles")
     name = models.CharField(max_length=100)
-    password = models.CharField(max_length=250)
     current_city = models.CharField(max_length=250)
     join_date = models.DateTimeField(auto_now_add=True)
 
