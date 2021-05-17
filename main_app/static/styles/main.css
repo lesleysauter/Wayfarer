@@ -39,7 +39,7 @@ img {
 h1 {
   flex-grow: 10;
   display: inline;
-  color: var(--darkgreen);
+  color: var(--brightgreen);
   font-size: 38px;
   margin: 12px;
 }
