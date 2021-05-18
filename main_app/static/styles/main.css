@@ -9,6 +9,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Coda', cursive;
 }
 
 body {
@@ -39,10 +40,13 @@ img {
 }
 
 h1 {
-  flex-grow: 10;
-  display: inline;
   color: var(--brightgreen);
   font-size: 38px;
+  
+}
+.logo-text {
+  flex-grow: 10;
+  display: inline;
   margin: 12px;
 }
 
@@ -50,10 +54,6 @@ a {
   margin: 20px 8px;
   color: var(--offwhite);
   text-decoration: none;
-}
-
-a, h1 {
-  font-family: 'Coda', cursive;
 }
 
 span {
