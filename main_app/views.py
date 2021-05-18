@@ -49,7 +49,12 @@ class Signup(View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("profile")
+            Profile.objects.create(
+                user=request.user, 
+                name="New User", 
+                current_city="Current City"
+                )
+            return redirect(f"/profile/{user.pk}")
         else:
             return HttpResponse("Unable to create profile!", content_type="text/plain")
 
