@@ -22,12 +22,20 @@ class Home(TemplateView):
 class ShowProfile(View):
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
-        context = {"user": user}
+        context = {"user": user, "posts": Post.objects.filter(profile=user.profile)}
         return render(request, "profile.html", context)
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(Profile, self).for_valid(form)
+
+class UpdateProfile(View):
+    def post(self, request, pk):
+        profile = Profile.objects.get(user=pk)
+        profile.name = request.POST["name"]
+        profile.current_city = request.POST["city"]
+        profile.save()
+        return redirect(f"/profile/{pk}")
     
 
 class Login(View):
