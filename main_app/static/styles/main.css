@@ -55,7 +55,6 @@ img {
 h1 {
   color: var(--brightgreen);
   font-size: 38px;
-  
 }
 
 .logo-text {
@@ -136,6 +135,13 @@ h3 {
   width: 100%;
   height: 500px;
   background-color: rgba(0, 0, 0, 0.356);
+}
+
+.hook-box {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 20px;
 }
 
 .topic-grid {
