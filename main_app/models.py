@@ -14,7 +14,7 @@ class Profile(Model):
 
 class Post(Model):
 
-    profile_id = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="posts")
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="posts")
     title = models.CharField(max_length=50)
     location = models.CharField(max_length=250)
     content = models.TextField(max_length=10000)
