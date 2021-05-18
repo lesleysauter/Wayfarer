@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="left-panel">
+    <h2>{{ user.username }}</h2>
+    <span><p>{{ user.profile.name }}</p>
+    <p>{{ user.profile.current_city }}</p>
+    <p>{{ user.profile.join_date }}</p></span>
+</section>
+
+<section class="right-panel">
+    <h3>Update Profile</h3>
+    <form method="POST" action="{% url 'updateProfile' user.pk %}">
+        {% csrf_token %}
+        <p><input type="text" name="name" placeholder="{{ user.profile.name }}"></p>
+        <p><input type="text" name="city" placeholder="{{ user.profile.current_city }}"></p>
+        <input type="submit" value="Update Details">
+    </form>
+
+    <h3>Posts</h3>
+    <ul class="post-list">
+        {% for post in posts %}
+        <li class="post-thumbnail">
+            <a href="{% url 'post' post.pk %}">
+                <h4>{{ post.title }}</h4>
+            </a>
+            <p>{{ post.location }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% endblock %}
