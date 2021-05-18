@@ -22,7 +22,7 @@ class Home(TemplateView):
 class ShowProfile(View):
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
-        context = {"user": user}
+        context = {"user": user, "posts": Post.objects.filter(profile=user.profile)}
         return render(request, "profile.html", context)
 
     def form_valid(self, form):
