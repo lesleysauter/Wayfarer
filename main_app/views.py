@@ -32,7 +32,9 @@ class ShowProfile(View):
 class UpdateProfile(View):
     def post(self, request, pk):
         profile = Profile.objects.get(user=pk)
-        profile.update(name=request.POST["name"], current_city=request.POST["city"])
+        profile.name = request.POST["name"]
+        profile.current_city = request.POST["city"]
+        profile.save()
         return redirect(f"/profile/{pk}")
     
 

@@ -11,7 +11,7 @@
 
 <section class="right-panel">
     <h3>Update Profile</h3>
-    <form method="POST" action="{% url updateProfile user.pk %}">
+    <form method="POST" action="{% url 'updateProfile' user.pk %}">
         {% csrf_token %}
         <p><input type="text" name="name" placeholder="{{ user.profile.name }}"></p>
         <p><input type="text" name="city" placeholder="{{ user.profile.current_city }}"></p>
