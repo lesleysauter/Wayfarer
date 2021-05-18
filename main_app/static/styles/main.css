@@ -12,6 +12,14 @@
   font-family: 'Coda', cursive;
 }
 
+form > ul {
+  display: none;
+}
+
+.helptext {
+  display: none;
+}
+
 body {
   height: 100vh;
   background-color: var(--offwhite);
