@@ -45,8 +45,7 @@ input {
   margin: 10px;
 }
 
-img {
-  height: 100%;
+#logo {
   display: inline;
   height: 75%;
   margin: 10px;
