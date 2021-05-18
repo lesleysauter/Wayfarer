@@ -109,3 +109,25 @@ h3 {
   border-radius: 10px;
   color: var(--offwhite);
 }
+
+.auth-box {
+  display: none;
+  box-shadow: 5px 5px 10px grey;
+  background-color: var(--offwhite);
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  left: calc(50% - 200px);
+  top: 50px;
+  padding: 15px;
+}
+
+.fade {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.356);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
