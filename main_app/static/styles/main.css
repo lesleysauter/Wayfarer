@@ -1,159 +1,46 @@
 :root{
-<<<<<<< HEAD
-    --offwhite: #f4f7ed;
-    --brightgreen: #86ee60;
-    --darkgreen: #2e6e65;
-    --darkblue: #2b3752;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Coda', cursive;
-  }
-  
-  form > ul {
-    display: none;
-  }
-  
-  .helptext {
-    display: none;
-  }
-  
-  body {
-    height: 100vh;
-    background-color: var(--offwhite);
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-  }
-  
-  nav {
-    background-color: var(--darkblue);
-    box-shadow: 5px 5px 10px grey;
-    height: 75px;
-    width: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-grow: 3;
-    justify-content: center;
-  }
-  
-  input {
-    padding: 10px;
-    margin: 10px;
-  }
-  
-  img {
-    height: 100%;
-    display: inline;
-    height: 75%;
-    margin: 10px;
-  }
-  
-  h1 {
-    color: var(--brightgreen);
-    font-size: 38px;
-    
-  }
-  
-  .logo-text {
-    flex-grow: 10;
-    display: inline;
-    margin: 12px;
-  }
-  
-  a {
-    margin: 20px 8px;
-    color: var(--offwhite);
-    text-decoration: none;
-  }
-  
-  span {
-    float: right;
-  }
-  
-  h3 {
-    margin: 20px;
-  }
-  
-  .left-panel {
-    height: calc(100% - 85px);
-    width: 30%;
-    background-color: var(--darkblue);
-    box-shadow: 5px 5px 10px grey;
-    margin-top: 10px;
-    color: var(--offwhite);
-    padding: 40px;
-    font-size: 40px;
-  }
-  
-  .right-panel {
-    height: calc(100% - 85px);
-    width: calc(70% - 10px);
-    box-shadow: 5px 5px 10px grey;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 40px 15%;
-  }
-  
-  .post-list {
-    list-style: none;
-  }
-  
-  .post-thumbnail {
-    background-color: var(--darkblue);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    color: var(--offwhite);
-  }
-  
-  .auth-box {
-    display: none;
-    box-shadow: 5px 5px 10px grey;
-    background-color: var(--offwhite);
-    position: absolute;
-    width: 400px;
-    height: 600px;
-    left: calc(50% - 200px);
-    top: 50px;
-    padding: 15px;
-  }
-  
-  .fade {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.356);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel {
-    width: 100%;
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0.356);
-  }
-  
-  .topic-grid {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  
-  .topic {
-    margin: 50px;
-  }
-=======
   --offwhite: #f4f7ed;
   --brightgreen: #86ee60;
   --darkgreen: #2e6e65;
   --darkblue: #2b3752;
 }
+/*include padding and border into the box*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.sqSlideshow-container {
+  width: 100%; 
+  height: 100%;
+  position: relative;
+ 
+}
+.sqSlides {
+  height: 100%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%; /*where to have the arrows*/
+  width: auto;
+  padding: 1em; /*push abit from the edges*/
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em; /*size of the arrows*/
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
 
 * {
   box-sizing: border-box;
@@ -197,9 +84,8 @@ input {
 
 img {
   height: 100%;
+  object-fit: cover;
   display: inline;
-  height: 75%;
-  margin: 10px;
 }
 
 h1 {
@@ -303,4 +189,3 @@ h3 {
 .topic {
   margin: 50px;
 }
->>>>>>> 4e1d3d2d8eff7377151c32b5c64b74dbd2876897
