@@ -85,7 +85,12 @@ input {
 img {
   height: 100%;
   object-fit: cover;
+}
+
+#logo {
   display: inline;
+  height: 75%;
+  margin: 10px;
 }
 
 h1 {
